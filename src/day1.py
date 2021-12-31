@@ -11,7 +11,7 @@ def part1():
             if n > prev:
                 ans += 1
             prev = n
-    print(ans)
+    return ans
 
 
 def part2():
@@ -25,17 +25,9 @@ def part2():
                 prev = q.popleft()
                 if n > prev:
                     ans += 1
-    print(ans)
+    return ans
 
 
-t0 = time()
-part1()
-t1 = time()
-part2()
-t2 = time()
-
-print(
-    f"""Timing:
-p1:  {t1 - t0:.5f} s
-p2:  {t2 - t1:.5f} s
-tot: {t2 - t0:.5f} s""")
+if __name__ == "__main__":
+    print(part1())
+    print(part2())

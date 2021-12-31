@@ -9,7 +9,7 @@ def part1():
                 case "forward": x += l
                 case "down": y += l
                 case "up": y -= l
-    print(x * y)
+    return x * y
 
 
 def part2():
@@ -24,8 +24,9 @@ def part2():
                     y += tilt * l
                 case "down": tilt += l
                 case "up": tilt -= l
-    print(x * y)
+    return x * y
 
 
-part1()
-part2()
+if __name__ == "__main__":
+    print(part1())
+    print(part2())

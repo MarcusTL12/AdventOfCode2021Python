@@ -17,7 +17,7 @@ def part1():
     for d in collector:
         n = 2 * n + (1 if 2 * d > amt_lines else 0)
     mask = 0xffffffff >> (32 - len(collector))
-    print(n * (~n & mask))
+    return n * (~n & mask)
 
 
 def single_out(m, inv):
@@ -55,8 +55,9 @@ def part2():
     ox = single_out(m, True)
     co2 = single_out(m, False)
 
-    print(f"{ox * co2}")
+    return ox * co2
 
 
-part1()
-part2()
+if __name__ == "__main__":
+    print(part1())
+    print(part2())
